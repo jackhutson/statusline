@@ -14,6 +14,18 @@ with context window tracking and session pets.
 - **Session pets** — every session gets a deterministic companion
 - **Catppuccin Mocha** theme with 24-bit truecolor
 
+## Variants
+
+Three statusline styles to match your setup:
+
+| Variant | Style | Font Required | File |
+|---------|-------|---------------|------|
+| **Powerline** | Catppuccin Mocha segments + pets | Nerd Font | `statusline.js` |
+| **Default** | Clean minimal with icons | Nerd Font | `statusline-default.js` |
+| **Compatible** | Plain text, Unicode bar | Any UTF-8 | `statusline-compat.js` |
+
+The installer (`bash install.sh`) prompts you to choose.
+
 ## Urgency States
 
 The progress bar, empty outline, and percentage text all change color together:
@@ -41,8 +53,9 @@ session ID. Same session, same pet — every time.
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 - Node.js (ships with Claude Code)
-- A [Nerd Font](https://www.nerdfonts.com/) (v3+ recommended)
+- A [Nerd Font](https://www.nerdfonts.com/) (v3+ recommended) — Powerline and Default variants
 - Terminal with truecolor support
+- Compatible variant works on any UTF-8 terminal
 
 ## Install
 
@@ -85,15 +98,15 @@ bash preview.sh
 
 ## Customization
 
-Edit the top of `statusline.js`:
+Edit the config section at the top of each variant's file:
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `BAR_WIDTH` | `12` | Number of progress bar characters |
-| `WARNING_THRESHOLD` | `60` | % to trigger yellow |
-| `CRITICAL_THRESHOLD` | `80` | % to trigger red |
-| `PETS` | 3 species x 8 names | Add your own pets and names |
-| `C` (palette) | Catppuccin Mocha | Swap hex values for any theme |
+| Option | Powerline | Default / Compatible | Description |
+|--------|-----------|---------------------|-------------|
+| `BAR_WIDTH` | `12` | `12` | Number of progress bar characters |
+| `WARNING_THRESHOLD` | `60` | `50` | % to trigger yellow |
+| `CRITICAL_THRESHOLD` | `80` | `80` | % to trigger red |
+| `PETS` | 3 species x 8 names | — | Add your own pets and names (Powerline only) |
+| `C` (palette) | Catppuccin Mocha | — | Swap hex values for any theme (Powerline only) |
 
 ## Anatomy
 
