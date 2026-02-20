@@ -6,10 +6,25 @@ SETTINGS="$HOME/.claude/settings.json"
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "Installing Claude Statusline..."
+echo ""
+echo "  Select a statusline variant:"
+echo ""
+echo "    1) Powerline   — Catppuccin Mocha powerline with pets (requires Nerd Font)"
+echo "    2) Default     — clean minimal with icons (requires Nerd Font)"
+echo "    3) Compatible  — works on any UTF-8 terminal"
+echo ""
+printf "  Choice [1-3]: "
+read -r choice
+
+case "$choice" in
+  2) SRC="$REPO_DIR/statusline-default.js" ;;
+  3) SRC="$REPO_DIR/statusline-compat.js" ;;
+  *) SRC="$REPO_DIR/statusline.js" ;;
+esac
 
 # Copy statusline
 mkdir -p "$(dirname "$DEST")"
-cp "$REPO_DIR/statusline.js" "$DEST"
+cp "$SRC" "$DEST"
 chmod +x "$DEST"
 
 # Update settings.json
