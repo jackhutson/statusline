@@ -17,9 +17,9 @@ printf "  Choice [1-3]: "
 read -r choice
 
 case "$choice" in
-  2) SRC="$REPO_DIR/statusline-default.js" ;;
-  3) SRC="$REPO_DIR/statusline-compat.js" ;;
-  *) SRC="$REPO_DIR/statusline.js" ;;
+  2) SRC="$REPO_DIR/src/statusline-default.js" ;;
+  3) SRC="$REPO_DIR/src/statusline-compat.js" ;;
+  *) SRC="$REPO_DIR/src/statusline.js" ;;
 esac
 
 # Copy statusline

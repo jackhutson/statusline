@@ -4,9 +4,9 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-SCRIPT_POWERLINE="$DIR/preview-runner.js"
-SCRIPT_DEFAULT="$DIR/preview-runner-default.js"
-SCRIPT_COMPAT="$DIR/preview-runner-compat.js"
+SCRIPT_POWERLINE="$DIR/preview/preview-runner.js"
+SCRIPT_DEFAULT="$DIR/preview/preview-runner-default.js"
+SCRIPT_COMPAT="$DIR/preview/preview-runner-compat.js"
 
 LEVELS=(0 8 25 45 60 70 80 90 100)
 BRANCH=$'\uF418'

@@ -3,8 +3,6 @@
 A Catppuccin Mocha powerline statusline for [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 with context window tracking and session pets.
 
-<!-- Add a screenshot: ![Hero](screenshots/hero.png) -->
-
 ## Features
 
 - **Powerline segments** with chevron separators and pill caps
@@ -20,9 +18,9 @@ Three statusline styles to match your setup:
 
 | Variant | Style | Font Required | File |
 |---------|-------|---------------|------|
-| **Powerline** | Catppuccin Mocha segments + pets | Nerd Font | `statusline.js` |
-| **Default** | Clean minimal with icons | Nerd Font | `statusline-default.js` |
-| **Compatible** | Plain text, Unicode bar | Any UTF-8 | `statusline-compat.js` |
+| **Powerline** | Catppuccin Mocha segments + pets | Nerd Font | `src/statusline.js` |
+| **Default** | Clean minimal with icons | Nerd Font | `src/statusline-default.js` |
+| **Compatible** | Plain text, Unicode bar | Any UTF-8 | `src/statusline-compat.js` |
 
 The installer (`bash install.sh`) prompts you to choose.
 
@@ -36,8 +34,6 @@ The progress bar, empty outline, and percentage text all change color together:
 | Warning | 60–79% | Yellow |
 | Critical | 80–100% | Red |
 
-<!-- Add screenshots: ![Warning](screenshots/warning.png) ![Critical](screenshots/critical.png) -->
-
 ## Session Pets
 
 Each Claude Code session gets a deterministic pet companion, hashed from the
@@ -46,8 +42,6 @@ session ID. Same session, same pet — every time.
 | | Cat | Dino | Ghost |
 |---|---|---|---|
 | **Names** | Pixel, Mochi, Luna, Nyx, Byte, Miso, Chip, Sage | Rex, Bash, Spike, Ember, Chomp, Blitz, Crunch, Fang | Boo, Wisp, Shade, Glitch, Echo, Drift, Haze, Fog |
-
-<!-- Add screenshot: ![Pets](screenshots/pets.png) -->
 
 ## Requirements
 
@@ -69,7 +63,7 @@ bash install.sh
 
 **Manual install:**
 
-1. Copy `statusline.js` to `~/.claude/hooks/statusline.js`
+1. Copy `src/statusline.js` to `~/.claude/hooks/statusline.js`
 2. `chmod +x ~/.claude/hooks/statusline.js`
 3. Add to `~/.claude/settings.json`:
 ```json
