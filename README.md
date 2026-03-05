@@ -3,6 +3,8 @@
 A Catppuccin Mocha powerline statusline for [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 with context window tracking and session pets.
 
+![Claude Statusline in action](images/hero.png)
+
 ## Features
 
 - **Powerline segments** with chevron separators and pill caps
@@ -24,6 +26,20 @@ Three statusline styles to match your setup:
 
 The installer (`bash install.sh`) prompts you to choose.
 
+### Powerline
+
+![Powerline variant preview](images/powerline-variant.png)
+
+### Default
+
+![Default variant live](images/default-live.png)
+![Default variant preview](images/default-variant.png)
+
+### Compatible
+
+![Compatible variant live](images/compatible-live.png)
+![Compatible variant preview](images/compatible-variant.png)
+
 ## Urgency States
 
 The progress bar, empty outline, and percentage text all change color together:
@@ -38,6 +54,8 @@ The progress bar, empty outline, and percentage text all change color together:
 
 Each Claude Code session gets a deterministic pet companion, hashed from the
 session ID. Same session, same pet — every time.
+
+![Session pets demo](images/session-pets.png)
 
 | | Cat | Dino | Ghost |
 |---|---|---|---|
