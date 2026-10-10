@@ -47,8 +47,23 @@ process.stdin.on('end', () => {
     const git = getGitInfo(cwd);
 
     render(model, dir, git, used);
+    reportToHerdr(model, git, used);
   } catch {}
 });
+
+// Fire-and-forget: mirror statusline data into the herdr sidebar as
+// pane metadata tokens ($ctx, $model, $branch). No-op outside herdr.
+function reportToHerdr(model, branch, used) {
+  if (process.env.HERDR_ENV !== '1' || !process.env.HERDR_PANE_ID) return;
+  const args = ['pane', 'report-metadata', process.env.HERDR_PANE_ID,
+    '--source', 'claude-statusline', '--ttl-ms', '900000',
+    '--token', `model=${model}`];
+  if (used != null) args.push('--token', `ctx=${used}%`);
+  if (branch) args.push('--token', `branch=${branch}`);
+  try {
+    require('child_process').spawn('herdr', args, { detached: true, stdio: 'ignore' }).unref();
+  } catch {}
+}
 
 function render(model, dir, git, used) {
   let out = '';

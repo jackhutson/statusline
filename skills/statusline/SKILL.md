@@ -52,6 +52,15 @@ Ask which variant the user wants if they haven't said. Default to Powerline.
 `bash "${CLAUDE_PLUGIN_ROOT}/preview.sh"` renders all states of every variant
 without installing anything.
 
+## Herdr sidebar tokens
+
+Every variant mirrors its data into the [Herdr](https://herdr.dev) agent
+sidebar when it runs inside a Herdr pane (`HERDR_ENV=1`): pane metadata tokens
+`$ctx` (context used %), `$model`, and `$branch` (with a `*` dirty marker),
+refreshed each statusline tick with a 15-minute TTL. Outside Herdr it is a
+no-op. Render them with `[ui.sidebar.agents.rows_by_agent] claude` in Herdr's
+config.toml.
+
 ## Switching variants
 
 Re-run step 1 with a different source file. Settings need no change.

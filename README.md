@@ -14,6 +14,12 @@ with context window tracking and session pets.
 - **Session pets** — every session gets a deterministic companion
 - **Catppuccin Mocha** theme with 24-bit truecolor
 
+## Herdr sidebar tokens
+
+Inside a [Herdr](https://herdr.dev) pane (`HERDR_ENV=1`) every variant also
+reports `$ctx`, `$model`, and `$branch` as pane metadata tokens for the agent
+sidebar, refreshed each tick with a 15-minute TTL. Outside Herdr it is a no-op.
+
 ## Variants
 
 Three statusline styles to match your setup:

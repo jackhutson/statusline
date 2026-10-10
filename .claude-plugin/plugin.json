@@ -1,10 +1,20 @@
 {
   "name": "statusline",
-  "version": "1.0.0",
-  "description": "Catppuccin Mocha powerline statusline for Claude Code with context tracking, git integration, and session pets — includes a setup skill covering all three variants",
-  "author": { "name": "Jack Hutson", "email": "code@jackhutson.com" },
+  "version": "1.1.0",
+  "description": "Catppuccin Mocha powerline statusline for Claude Code with context tracking, git integration, session pets, and Herdr sidebar tokens \u2014 includes a setup skill covering all three variants",
+  "author": {
+    "name": "Jack Hutson",
+    "email": "code@jackhutson.com"
+  },
   "homepage": "https://github.com/jackhutson/statusline#readme",
   "repository": "https://github.com/jackhutson/statusline",
   "license": "MIT",
-  "keywords": ["statusline", "powerline", "catppuccin", "terminal", "nerd-font"]
+  "keywords": [
+    "statusline",
+    "powerline",
+    "catppuccin",
+    "terminal",
+    "nerd-font",
+    "herdr"
+  ]
 }
